@@ -1,7 +1,5 @@
 from collections import deque
-
 numbers = deque()
-
 for _ in range(int(input())):
     number_data = [int(x) for x in input().split()]
     command = number_data[0]
@@ -16,6 +14,5 @@ for _ in range(int(input())):
     elif command == 4:
         if numbers:
             print(min(numbers))
-
 numbers.reverse()
 print(*numbers, sep=", ")
