@@ -26,3 +26,6 @@ while materials and magic_levels:
         materials.append(material + magic_level)
     elif product > 0:
         materials.append(material + 15)
+
+    if {"Doll", "Teddy bear"}.issubset(crafted) or {"Teddy bear", "Bicycle"}.issubset(crafted):
+        pass
