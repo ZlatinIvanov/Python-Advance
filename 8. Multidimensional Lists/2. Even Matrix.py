@@ -1,11 +1,15 @@
+def filter_even_numbers(matrix):
+    even_matrix = [[num for num in row if num % 2 == 0] for row in matrix]
+    return even_matrix
+
 rows = int(input())
-# cols = [int(x) for x in input().split(", ")]
-matrix = [[int(x) for x in input().split(", ")] for row in range(rows)]
-even_matrix = []
-for row in matrix:
-    for num in row:
-        if num % 2 == 0:
-            num = [num]
-            even_matrix.append(num)
-print(matrix)
+
+matrix = []
+
+for _ in range(rows):
+    row = [int(num) for num in input().split(", ")]
+    matrix.append(row)
+
+even_matrix = filter_even_numbers(matrix)
+
 print(even_matrix)
