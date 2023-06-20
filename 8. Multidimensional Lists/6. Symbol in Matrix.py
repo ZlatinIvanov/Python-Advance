@@ -1,5 +1,20 @@
-size = int(input())
+def find_symbol(matrix, symbol):
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            if matrix[i][j] == symbol:
+                return f"({i}, {j})"
+    return f"{symbol} does not occur in the matrix"
 
-matrix = [[x for x in input().split()] for row in range(size)]
+
+n = int(input())
+
+matrix = []
+for _ in range(n):
+    row = input()
+    matrix.append(list(row))
+
 symbol = input()
-print(matrix)
+
+result = find_symbol(matrix, symbol)
+
+print(result)
